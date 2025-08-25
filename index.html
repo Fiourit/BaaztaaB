@@ -86,7 +86,7 @@
 
         .game-button:active {
             transform: translateY(0);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4-6px rgba(0, 0, 0, 0.2);
         }
         
         #message-area {
@@ -135,7 +135,7 @@
         p {
             margin: 5px 0;
             line-height: 1.4;
-            color: #F0F0F0; /* Refined for better contrast */
+            color: #F0F0F0;
         }
 
         ul {
@@ -296,7 +296,6 @@
                 ctx.shadowBlur = 10;
                 ctx.shadowColor = this.color;
                 ctx.fill();
-                ctx.shadowBlur = 0;
                 ctx.closePath();
             }
 
@@ -452,7 +451,6 @@
                 ctx.shadowBlur = 15;
                 ctx.shadowColor = '#BB86FC';
                 ctx.stroke();
-                ctx.fill();
                 ctx.closePath();
             }
 
