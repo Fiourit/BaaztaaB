@@ -8,7 +8,7 @@
         body {
             font-family: 'Inter', sans-serif;
             display: flex;
-            justify-content: center;
+            justify-content: flex-start; /* Changed to start from the top */
             align-items: center;
             min-height: 100vh;
             margin: 0;
@@ -231,7 +231,7 @@
         let canvasWidth, canvasHeight;
         const resizeCanvas = () => {
             canvasWidth = container.clientWidth - 40;
-            canvasHeight = window.innerHeight * 0.7;
+            canvasHeight = Math.min(window.innerHeight * 0.7, 400); /* Adjusted for shorter screen */
             canvas.width = canvasWidth;
             canvas.height = canvasHeight;
         };
