@@ -135,6 +135,7 @@
         p {
             margin: 5px 0;
             line-height: 1.4;
+            color: #F0F0F0; /* Refined for better contrast */
         }
 
         ul {
@@ -171,6 +172,12 @@
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+        }
+
+        @media (max-width: 600px) {
+            #topLeftLogo, #topRightLogo {
+                width: 100px;
+            }
         }
     </style>
 </head>
@@ -446,7 +453,6 @@
                 ctx.shadowColor = '#BB86FC';
                 ctx.stroke();
                 ctx.fill();
-                ctx.shadowBlur = 0;
                 ctx.closePath();
             }
 
