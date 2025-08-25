@@ -182,12 +182,28 @@
     </style>
 </head>
 <body>
+    <!--
+        This script dynamically determines the base path for GitHub Pages.
+        You must replace 'your-repo-name' with your actual repository name.
+        Example: if your repo is 'my-game', use 'my-game'.
+        If the page is hosted at the root of a domain (e.g., yourname.github.io),
+        this script will correctly set baseurl to an empty string.
+    -->
+    <script>
+        const repoName = 'BaaztaaB'; // CHANGE THIS TO YOUR REPO NAME
+        const baseurl = window.location.pathname.startsWith(`/${repoName}`) ? `/${repoName}` : '';
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('topLeftLogoImg').src = `${baseurl}/images/Logo-BaaztaaB.png`;
+            document.getElementById('topRightLogoImg').src = `${baseurl}/images/Logo-FiouriT.png`;
+        });
+    </script>
+
     <div id="topLeftLogo">
-        <img src="images/Logo-BaaztaaB.png" alt="BaaztaaB Logo">
+        <img id="topLeftLogoImg" src="" alt="BaaztaaB Logo">
         <div class="tagline">Your Mind, Your Mirror</div>
     </div>
     <div id="topRightLogo">
-        <img src="images/Logo-FiouriT.png" alt="FiouriT Logo">
+        <img id="topRightLogoImg" src="" alt="FiouriT Logo">
     </div>
 
     <div id="gameContainer">
